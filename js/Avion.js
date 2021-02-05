@@ -13,6 +13,8 @@ export default class Avion{
     createCard () {
 
 
+
+
         var conteneur = document.createElement("div");
         conteneur.setAttribute("class", "card-block");
         document.getElementById("renegade").appendChild(conteneur);
@@ -21,19 +23,19 @@ export default class Avion{
         image.setAttribute("src",this.pictureLocation);
         image.setAttribute("class", "card-img-top");
         image.setAttribute("style", "height:300px;");
-       document.getElementsByClassName("card-block").appendChild(image);
+       document.getElementsByClassName("card-block")[0].appendChild(image);
 
 
 
                 var contenant = document.createElement("div");
                 contenant.setAttribute("class", "card-body");
-                document.getElementsByClassName("card-block").appendChild(contenant);
+                document.getElementsByClassName("card-block")[0].appendChild(contenant);
 
                 var titre = document.createElement("h5");
                 titre.setAttribute("class","card-title")
                 var nomCommercial = this.marque + " " + this.modele;
                 titre.innerText = nomCommercial;
-                document.getElementsByClassName("card-body").appendChild(titre);
+                document.getElementsByClassName("card-body")[0].appendChild(titre);
 
 
                 var propulsion = document.createElement("h6");
@@ -60,7 +62,7 @@ export default class Avion{
                 bouton.innerHTML = this.modele + " Take-Off";
                 contenant.appendChild(bouton);
 
-        console.log(test.length);
+
 
 
 
