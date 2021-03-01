@@ -22,6 +22,8 @@ export function beforeStart () {
  AirbusA320.procedureBeforeStart.set("BEACON", "ON/AUTO");
  AirbusA320.procedureBeforeStart.set("THR LEVERS", "IDLE");
  AirbusA320.procedureBeforeStart.set("PARKING BRAKE", "AS RQRD");
+
+ return AirbusA320.procedureBeforeStart;
 };
 
 export function engineManagement () {
@@ -33,6 +35,8 @@ export function engineManagement () {
  AirbusA320.procedureEngineManagement.set("ENGINE START SELECTOR", "IGN/START");
  AirbusA320.procedureEngineManagement.set("ENGINE 1 MASTER SWITCH", "ON");
  AirbusA320.procedureEngineManagement.set("ENGINE 2 MASTER SWITCH", "ON");
+
+ return AirbusA320.procedureEngineManagement;
 };
 
 export function afterStart () {
@@ -46,18 +50,22 @@ export function afterStart () {
  AirbusA320.procedureAfterStart.set("ATC+TCAS", "SET");
  AirbusA320.procedureAfterStart.set("RADAR+PWS", "SECURED FOR TO");
  AirbusA320.procedureAfterStart.set("CABIN", "TO NO BLUE");
+
  var ecamMemo = [];
  ecamMemo.push("AUTO BRK MAX");
  ecamMemo.push("SIGNS ON");
  ecamMemo.push("SPLRS ARM");
  ecamMemo.push("FLAPS TO");
  ecamMemo.push("TO CONFIG NORM");
+
  AirbusA320.procedureAfterStart.set("ECAM MEMO", ecamMemo);
  AirbusA320.procedureAfterStart.set("LAPTOP", "STOWED");
  AirbusA320.procedureAfterStart.set("STROBELIGHTS", "AS RQRD");
  AirbusA320.procedureAfterStart.set("CABIN CREW", "ADVISED");
  AirbusA320.procedureAfterStart.set("ENG MODE SEL", "AS RQRD");
  AirbusA320.procedureAfterStart.set("PACKS", "AS RQRD");
+
+ return AirbusA320.procedureAfterStart;
 };
 
 export function afterTakeOff () {
@@ -66,4 +74,6 @@ export function afterTakeOff () {
  AirbusA320.procedureAfterTakeOff.set("FLAPS", "ZERO");
  AirbusA320.procedureAfterTakeOff.set("PACKS", "ON");
  AirbusA320.procedureAfterTakeOff.set("BARO REF", "SET(BOTH)");
+
+ return AirbusA320.procedureAfterTakeOff;
 };

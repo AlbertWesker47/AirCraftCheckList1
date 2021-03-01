@@ -14,7 +14,7 @@ export default class Avion{
 
 
         var conteneur = document.createElement("div");
-        conteneur.setAttribute("class", "card-block");
+        conteneur.setAttribute("class", "card card-block");
         document.getElementById("renegade").appendChild(conteneur);
 
         var image = document.createElement("img");
@@ -58,7 +58,7 @@ export default class Avion{
 
 
                 var bouton = document.createElement("a");
-                bouton.setAttribute("class", "btn btn-primary stretched-link");
+                bouton.setAttribute("class", "btn btn-outline-secondary stretched-link");
                 bouton.setAttribute("href",this.url);
                 bouton.innerHTML = this.modele + " Take-Off";
                 contenant.appendChild(bouton);
