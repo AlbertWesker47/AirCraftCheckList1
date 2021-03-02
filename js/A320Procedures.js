@@ -2,11 +2,6 @@ import {beforeStart, engineManagement, afterTakeOff, afterStart} from "./AirbusA
 
 
 const pro1 = beforeStart();
-
-console.log(pro1);
-
-
-
 const pro2 = engineManagement();
 const pro3 = afterStart();
 const pro4 = afterTakeOff();
@@ -28,7 +23,6 @@ conteneur.setAttribute("class", "table procedure");
 let conteneurTitre = document.createElement("thead");
 let titre = document.createElement("th");
 titre.innerText = "BEFORE START";
-//maintitle.appendChild(conteneur);
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -37,7 +31,8 @@ let proceduresBody = document.createElement("tbody");
 conteneur.appendChild(proceduresBody);
 
 
-for (const [key, value] of pro1) {
+for (const [key, value] of pro1)
+{
     let procedureLine = document.createElement("tr");
     let procedureConstruct = document.createElement("td");
     procedureConstruct.innerText = key+"  ..................  "+value;

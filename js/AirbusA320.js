@@ -38,7 +38,15 @@ export function engineManagement () {
  AirbusA320.procedureEngineManagement.set("CHECK ECAM OIL", "10 QTS ++");
  AirbusA320.procedureEngineManagement.set("ENGINE START SELECTOR", "IGN/START");
  AirbusA320.procedureEngineManagement.set("ENGINE 1 MASTER SWITCH", "ON");
- AirbusA320.procedureEngineManagement.set("ENGINE 2 MASTER SWITCH", "ON");
+
+ var engine2masterSwitch = [];
+ engine2masterSwitch.push("AUTO BRK MAX");
+ engine2masterSwitch.push("SIGNS ON");
+ engine2masterSwitch.push("SPLRS ARM");
+ engine2masterSwitch.push("FLAPS TO");
+ engine2masterSwitch.push("TO CONFIG NORM");
+
+ AirbusA320.procedureEngineManagement.set("ENGINE 2 MASTER SWITCH", engine2masterSwitch);
 
  return AirbusA320.procedureEngineManagement;
 };
