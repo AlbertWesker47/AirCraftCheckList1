@@ -5,7 +5,11 @@ import Avion from "./Avion.js";
      "images/Airbus/face.jpg","A320.html");
 
 
-AirbusA320.createCard();
+if(document.getElementById("renegade") != null)
+{
+ AirbusA320.createCard();
+
+}
 
 export function beforeStart () {
  AirbusA320.procedureBeforeStart = new Map();
