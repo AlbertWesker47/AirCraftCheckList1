@@ -5,7 +5,10 @@ export const Cessna172N = new Avion("Cessna","172N",
     "1 4-cylinder motor", "767","1289",
     "images/CESSNA/primary.jpg","172N.html");
 
-Cessna172N.createCard();
+
+if(document.getElementById("renegade") != null) {
+    Cessna172N.createCard();
+}
 //Procédures pour le Cessna 172N
 export function beforeStartingEngineProcedure () {
 Cessna172N.procedureBeforeStartingEngine = new Map ();
@@ -19,6 +22,8 @@ Cessna172N.procedureBeforeStartingEngine.set("ELECTRICAL EQUIP/AUTOPILOT","OFF")
 Cessna172N.procedureBeforeStartingEngine.set("AVIONICS POWER SWITCH","OFF");
 Cessna172N.procedureBeforeStartingEngine.set("FUEL SELECTOR VALVE","BOTH");
 Cessna172N.procedureBeforeStartingEngine.set("FUEL SHUTOFF VALVE","ON(IN)");
+
+return Cessna172N.procedureBeforeStartingEngine;
 };
 
 export function startingEngineProcedure () {
@@ -47,6 +52,8 @@ Cessna172N.procedureStartingEngine.set("AUTOPILOT","ENGAGE");
 Cessna172N.procedureStartingEngine.set("FLIGHT CONTROLS","MOVE AGAINST AP");
 Cessna172N.procedureStartingEngine.set("AUTOPILOT","DISCONNECT (SOUND)");
 Cessna172N.procedureStartingEngine.set("DEPARTURE & TAXI CLRNCE","CONTACT");
+
+return Cessna172N.procedureStartingEngine;
  };
 
 export function beforeTakeOffProcedure () {
@@ -77,6 +84,8 @@ export function beforeTakeOffProcedure () {
     Cessna172N.procedureBeforeTakeOff.set("FLAPS", "SET FOR TAKEOFF (0°-10°)");
     Cessna172N.procedureBeforeTakeOff.set("PARKING BREAK", "RELEASE");
     Cessna172N.procedureBeforeTakeOff.set("WINDOWS", "CLOSED");
+
+    return Cessna172N.procedureBeforeTakeOff;
 };
 
 export function takeOffProcedure () {
@@ -89,4 +98,6 @@ export function takeOffProcedure () {
     Cessna172N.procedureTakeOff.set("TACH, OIL, AIRSPEED", "CHECK");
     Cessna172N.procedureTakeOff.set("ELEVATOR", "LIFT AT 55 KIAS");
     Cessna172N.procedureTakeOff.set("CLIMB", "70-80 KIAS");
+
+    return Cessna172N.procedureTakeOff;
 };

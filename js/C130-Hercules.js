@@ -17,7 +17,7 @@ export function beforeStartingEngines () {
     C130Hercules.procedureBeforeStartingEngines.set("FORMS","CHECKED");
     C130Hercules.procedureBeforeStartingEngines.set("OXYGEN","SET(ALL CREWMEMBERS)");
     C130Hercules.procedureBeforeStartingEngines.set("SCNS/GPS","SET");
-    C130Hercules.procedureBeforeStartingEngines.set("RADIOS","ON/SET(REQUEST START CLEARANCE");
+    C130Hercules.procedureBeforeStartingEngines.set("RADIOS","ON/SET(REQUEST START CLEARANCE)");
     C130Hercules.procedureBeforeStartingEngines.set("CLEAR/START","GTC/APU");
     C130Hercules.procedureBeforeStartingEngines.set("LIGHTS","SET");
     C130Hercules.procedureBeforeStartingEngines.set("FUEL","CHECKED (TOTAL QTY AND BALANCE LIMITATIONS)");

@@ -30,13 +30,16 @@ let conteneur = document.createElement("table");
 conteneur.setAttribute("class", "table procedure");
 let conteneurTitre = document.createElement("thead");
 let titre = document.createElement("th");
-titre.innerText = "BEFORE STARTING ENGINES";insertAfter(maintitle,conteneur);
+titre.innerText = "BEFORE START";
+insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
+
 let proceduresBody = document.createElement("tbody");
 conteneur.appendChild(proceduresBody);
 
-for (const [key, value] of Object.keys(pro1))
+
+for (const [key, value] of pro1)
 {
     let procedureLine = document.createElement("tr");
     let procedureConstruct = document.createElement("td");
@@ -44,34 +47,7 @@ for (const [key, value] of Object.keys(pro1))
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
-
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
         let procedureButton = document.createElement("input");
         procedureButton.setAttribute("class","button");
         procedureButton.setAttribute("type","button");
@@ -79,9 +55,8 @@ for (const [key, value] of Object.keys(pro1))
         buttonRow.appendChild(procedureButton);
         procedureLine.appendChild(procedureConstruct);
         procedureLine.appendChild(buttonRow);
-    }
-}
 
+}
 
 
 //PROCEDURE 2
@@ -94,7 +69,7 @@ titre.innerText = "STARTING ENGINES";
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
-let proceduresBody = document.createElement("tbody");
+proceduresBody = document.createElement("tbody");
 conteneur.appendChild(proceduresBody);
 
 for (const [key, value] of pro2)
@@ -106,42 +81,15 @@ for (const [key, value] of pro2)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 }
 
 
@@ -156,7 +104,7 @@ titre.innerText = "BEFORE TAXI";
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
-let proceduresBody = document.createElement("tbody");
+proceduresBody = document.createElement("tbody");
 conteneur.appendChild(proceduresBody);
 
 for (const [key, value] of pro3)
@@ -167,42 +115,16 @@ for (const [key, value] of pro3)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
 
-    }
-    else if (value.contains(","))
-    {
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 }
 
 
@@ -227,42 +149,15 @@ for (const [key, value] of pro4)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 }
 
 
@@ -288,42 +183,15 @@ for (const [key, value] of pro5)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 }
 
 
@@ -349,42 +217,15 @@ for (const [key, value] of pro6)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 }
 
 
@@ -409,42 +250,15 @@ for (const [key, value] of pro7)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 }
 
 //PROCEDURE 8
@@ -468,42 +282,15 @@ for (const [key, value] of pro8)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 }
 
 //PROCEDURE 9
@@ -527,43 +314,12 @@ for (const [key, value] of pro9)
     proceduresBody.appendChild(procedureLine);
     let buttonRow = document.createElement("td");
 
-    if (value.contains("(BOTH)"))
-    {
-        let tournevisSpatial = value.split('(');
-        let displayText = tournevisSpatial[0];
-        let pilot1button = document.createElement("input");
-        pilot1button.setAttribute("class","button");
-        pilot1button.setAttribute("type","button");
-        pilot1button.setAttribute("value",displayText);
-        let pilot2button = document.createElement("input");
-        pilot2button.setAttribute("class","button");
-        pilot2button.setAttribute("type","button");
-        pilot2button.setAttribute("value",displayText);
-        buttonRow.appendChild(pilot1button);
-        buttonRow.appendChild(pilot2button);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
 
-    else if (value.contains("__"))
-    {
-
-    }
-    else if (value.contains(","))
-    {
-
-    }
-    else
-    {
-        let procedureButton = document.createElement("input");
-        procedureButton.setAttribute("class","button");
-        procedureButton.setAttribute("type","button");
-        procedureButton.setAttribute("value",value);
-        buttonRow.appendChild(procedureButton);
-        procedureLine.appendChild(procedureConstruct);
-        procedureLine.appendChild(buttonRow);
-    }
-
-
-
+    let procedureButton = document.createElement("input");
+    procedureButton.setAttribute("class","button");
+    procedureButton.setAttribute("type","button");
+    procedureButton.setAttribute("value",value);
+    buttonRow.appendChild(procedureButton);
+    procedureLine.appendChild(procedureConstruct);
+    procedureLine.appendChild(buttonRow);
 }
