@@ -27,10 +27,12 @@ function insertAfter(referenceNode, newNode) {
 //PROCEDURE 1
 let maintitle = document.querySelector("h1");
 let conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 let conteneurTitre = document.createElement("thead");
 let titre = document.createElement("th");
 titre.innerText = "BEFORE START";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -62,10 +64,12 @@ for (const [key, value] of pro1)
 //PROCEDURE 2
 maintitle = document.querySelector("table");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "STARTING ENGINES";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -97,10 +101,12 @@ for (const [key, value] of pro2)
 //PROCEDURE 3
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "BEFORE TAXI";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -131,10 +137,12 @@ for (const [key, value] of pro3)
 //PROCEDURE 4
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "TAXI";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -165,10 +173,12 @@ for (const [key, value] of pro4)
 //PROCEDURE 5
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "BEFORE TAKEOFF";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -199,10 +209,12 @@ for (const [key, value] of pro5)
 //PROCEDURE 6
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "LINEUP";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -232,10 +244,12 @@ for (const [key, value] of pro6)
 //PROCEDURE 7
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "TAKEOFF";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -264,10 +278,12 @@ for (const [key, value] of pro7)
 //PROCEDURE 8
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "TAKEOFF";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -296,10 +312,12 @@ for (const [key, value] of pro8)
 //PROCEDURE 9
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "TAKEOFF";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);

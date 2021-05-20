@@ -19,7 +19,7 @@ export default class Avion{
         var image = document.createElement("img");
         image.setAttribute("src",this.pictureLocation);
         image.setAttribute("class", "card-img-top");
-        image.setAttribute("style", "height:300px;");
+        image.setAttribute("style", "height:230px");
         conteneur.appendChild(image);
 
 
@@ -53,7 +53,7 @@ export default class Avion{
 
 
                 var bouton = document.createElement("a");
-                bouton.setAttribute("class", "btn btn-outline-secondary stretched-link");
+                bouton.setAttribute("class", "btn btn-outline-success stretched-link");
                 bouton.setAttribute("href",this.url);
                 bouton.innerHTML = this.modele + " Take-Off";
                 contenant.appendChild(bouton);

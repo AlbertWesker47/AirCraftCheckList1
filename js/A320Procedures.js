@@ -20,9 +20,12 @@ function insertAfter(referenceNode, newNode) {
 
 let maintitle = document.querySelector("h1");
 let conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 let conteneurTitre = document.createElement("thead");
 let titre = document.createElement("th");
+titre.setAttribute("class", "th-sm")
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 titre.innerText = "BEFORE START";
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
@@ -80,10 +83,12 @@ for (const [key, value] of pro1)
 
 maintitle = document.querySelector("table");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "ENGINES MANAGEMENT";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -139,10 +144,12 @@ for (const [key, value] of pro2)
 
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "AFTER START";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
@@ -201,10 +208,12 @@ for (const [key, value] of pro3)
 
 maintitle = document.querySelector("table:last-of-type");
 conteneur = document.createElement("table");
-conteneur.setAttribute("class", "table procedure");
+conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
 conteneurTitre = document.createElement("thead");
 titre = document.createElement("th");
 titre.innerText = "AFTER TAKEOFF / CLIMB";
+titre.setAttribute("colspan", "2")
+titre.setAttribute('style', 'font-size: 20px; cursor: pointer; text-align: center');
 insertAfter(maintitle,conteneur);
 conteneur.appendChild(conteneurTitre);
 conteneurTitre.appendChild(titre);
