@@ -10,6 +10,12 @@ if(document.getElementById("renegade") != null)
  AirbusA320.createCard();
 
 }
+export function validate(id)
+ {
+   document.getElementById(id).style.color = "green";
+ }
+
+
 
 export function beforeStart () {
  AirbusA320.procedureBeforeStart = new Map();
