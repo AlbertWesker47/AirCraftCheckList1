@@ -12,7 +12,26 @@ if(document.getElementById("renegade") != null)
 }
 export function validate(id)
  {
-   document.getElementById(id).style.color = "green";
+  let target_element = document.getElementById(id);
+
+  if (target_element.value === "SET")
+  {
+   console.log(target_element.value)
+   var entered_value = prompt("Please enter the value :")
+   while(entered_value == null || entered_value == "")
+   {
+    entered_value = prompt("The value must be entered.")
+   }
+   target_element.value = entered_value;
+   target_element.style.color = "limegreen";
+   target_element.disabled = true;
+  }
+  else
+  {
+   target_element.style.color = "limegreen";
+   target_element.disabled = true;
+  }
+
  }
 
 
@@ -45,7 +64,7 @@ export function engineManagement () {
  AirbusA320.procedureEngineManagement.set("ENGINE START SELECTOR", "IGN/START");
  AirbusA320.procedureEngineManagement.set("ENGINE 1 MASTER SWITCH", "ON");
 
- var engine2masterSwitch = [];
+ let engine2masterSwitch = [];
  engine2masterSwitch.push("AUTO BRK MAX");
  engine2masterSwitch.push("SIGNS ON");
  engine2masterSwitch.push("SPLRS ARM");
@@ -69,7 +88,7 @@ export function afterStart () {
  AirbusA320.procedureAfterStart.set("RADAR+PWS", "SECURED FOR TO");
  AirbusA320.procedureAfterStart.set("CABIN", "TO NO BLUE");
 
- var ecamMemo = [];
+ let ecamMemo = [];
  ecamMemo.push("AUTO BRK MAX");
  ecamMemo.push("SIGNS ON");
  ecamMemo.push("SPLRS ARM");

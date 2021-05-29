@@ -30,6 +30,7 @@ background-image:url(images/dashboard.jpg);
     text-align: center;
     position: relative;
     color: whitesmoke;
+
 }
 
 .backgroundpage {
@@ -72,4 +73,10 @@ background-image:url(images/dashboard.jpg);
     font-weight: bold;
     margin: 4px 4px;
     cursor: pointer;
+}
+
+.checktitle
+{
+    text-align: center;
+    font-weight: bold;
 }
