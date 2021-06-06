@@ -9,15 +9,41 @@ if(document.getElementById("renegade") != null)
     C130Hercules.createCard();
 
 }
+export function validate(id)
+{
+    let status = true;
+    let check_previous_step_status = function (id)
+    {
+        let previous_id = parseInt(id)-1;
+        let previous_element = document.getElementById(previous_id);
+        if(previous_element.style.color !== "limegreen")
+        {
+            status = false;
+            alert("The previous step must be checked and clicked.")
+        }
+    }
 
+    if (parseInt(id) > 0)
+    {
+        check_previous_step_status(id);
+    }
+
+    let target_element = document.getElementById(id);
+
+    if (status === true)
+    {
+        target_element.style.color = "limegreen";
+        target_element.disabled = true;
+    }
+}
 //Procédures pour le Lockheed Martin C-130 Hercules
 
 export function beforeStartingEngines () {
     C130Hercules.procedureBeforeStartingEngines = new Map();
     C130Hercules.procedureBeforeStartingEngines.set("FORMS","CHECKED");
-    C130Hercules.procedureBeforeStartingEngines.set("OXYGEN","SET(ALL CREWMEMBERS)");
+    C130Hercules.procedureBeforeStartingEngines.set("OXYGEN","SET (ALL CREWMEMBERS)");
     C130Hercules.procedureBeforeStartingEngines.set("SCNS/GPS","SET");
-    C130Hercules.procedureBeforeStartingEngines.set("RADIOS","ON/SET(REQUEST START CLEARANCE)");
+    C130Hercules.procedureBeforeStartingEngines.set("RADIOS","ON/SET (REQUEST START CLEARANCE)");
     C130Hercules.procedureBeforeStartingEngines.set("CLEAR/START","GTC/APU");
     C130Hercules.procedureBeforeStartingEngines.set("LIGHTS","SET");
     C130Hercules.procedureBeforeStartingEngines.set("FUEL","CHECKED (TOTAL QTY AND BALANCE LIMITATIONS)");
@@ -47,14 +73,14 @@ export function startingEngines () {
 export function beforeTaxi () {
     C130Hercules.procedureBeforeTaxi = new Map();
     C130Hercules.procedureBeforeTaxi.set("COMPASS SYSTEM AND HEADING INDICATORS","CHECKED AND VERIFIED");
-    C130Hercules.procedureBeforeTaxi.set("RADIOS AND NAVIGATION", "CHECKED(ALL NECESSARY EQUIPMENT ON)");
+    C130Hercules.procedureBeforeTaxi.set("RADIOS AND NAVIGATION", "CHECKED (ALL NECESSARY EQUIPMENT ON)");
     C130Hercules.procedureBeforeTaxi.set("IFF/TRANSPONDER", "CHECKED/STANDBY");
     C130Hercules.procedureBeforeTaxi.set("FLAPS", "SET 50% (FOR TAKEOFF)");
     C130Hercules.procedureBeforeTaxi.set("HYDRAULIC PRESSURES", "CHECKED");
     C130Hercules.procedureBeforeTaxi.set("AUTOPILOT", "VERIFY OFF");
     C130Hercules.procedureBeforeTaxi.set("INSTRUMENTS", "CHECKED");
     C130Hercules.procedureBeforeTaxi.set("SCNS/GPS", "CHECKED");
-    C130Hercules.procedureBeforeTaxi.set("ALTIMETERS", "SET(LOCAL SETTING)");
+    C130Hercules.procedureBeforeTaxi.set("ALTIMETERS", "SET (LOCAL SETTING)");
     C130Hercules.procedureBeforeTaxi.set("TAXI LIGHT", "ON");
 
     return C130Hercules.procedureBeforeTaxi;
@@ -71,19 +97,19 @@ export function taxi () {
 export function beforeTakeOff () {
     C130Hercules.procedureBeforeTakeOff = new Map();
     C130Hercules.procedureBeforeTakeOff.set("SAFETY BELT/SHOULDER HARNESS", "FASTENED/UNLOCKED");
-    C130Hercules.procedureBeforeTakeOff.set("TRIM TABS", "SET(FOR TAKEOFF)");
-    C130Hercules.procedureBeforeTakeOff.set("FLAPS", "SET(CONFIRM 50% FOR TAKEOFF)");
+    C130Hercules.procedureBeforeTakeOff.set("TRIM TABS", "SET (FOR TAKEOFF)");
+    C130Hercules.procedureBeforeTakeOff.set("FLAPS", "SET (CONFIRM 50% FOR TAKEOFF)");
     C130Hercules.procedureBeforeTakeOff.set("FLIGHT CONTROLS", "CHECKED (FREEDOM OF MOVEMENT)");
-    C130Hercules.procedureBeforeTakeOff.set("CREW BRIEFING", "COMPLETED(INCLUDED TOLD,DEPARTURE INSTRUCTIONS, AND EMERGENCIES)");
-    C130Hercules.procedureBeforeTakeOff.set("INSTRUMENTS", "SET(FOR DEPARTURE)");
-    C130Hercules.procedureBeforeTakeOff.set("SCNS/GPS", "ENHANCED INTERRUPTED ALIGNMENT COMPLETE(IF NEEDED)");
+    C130Hercules.procedureBeforeTakeOff.set("CREW BRIEFING", "COMPLETED (INCLUDED TOLD,DEPARTURE INSTRUCTIONS, AND EMERGENCIES)");
+    C130Hercules.procedureBeforeTakeOff.set("INSTRUMENTS", "SET (FOR DEPARTURE)");
+    C130Hercules.procedureBeforeTakeOff.set("SCNS/GPS", "ENHANCED INTERRUPTED ALIGNMENT COMPLETE (IF NEEDED)");
 
     return C130Hercules.procedureBeforeTakeOff;
 };
 
 export function lineUp () {
     C130Hercules.procedureLineup = new Map();
-    C130Hercules.procedureLineup.set("EXTERIOR LIGHTS", "SET(EXTEND AND TURN ON LANDING LIGHTS)");
+    C130Hercules.procedureLineup.set("EXTERIOR LIGHTS", "SET (EXTEND AND TURN ON LANDING LIGHTS)");
     C130Hercules.procedureLineup.set("IFF TRANSPONDER", "ON/SET");
 
     return C130Hercules.procedureLineup;
@@ -101,8 +127,8 @@ export function takeOff () {
 
 export function afterTakeOff () {
     C130Hercules.procedureAfterTakeOff = new Map();
-    C130Hercules.procedureAfterTakeOff.set("LANDING GEAR", "UP(UPON POSITIVE INDICATION OF CLIMB)");
-    C130Hercules.procedureAfterTakeOff.set("FLAPS", "UP(AFTER GEAR RETRACTS)");
+    C130Hercules.procedureAfterTakeOff.set("LANDING GEAR", "UP (UPON POSITIVE INDICATION OF CLIMB)");
+    C130Hercules.procedureAfterTakeOff.set("FLAPS", "UP (AFTER GEAR RETRACTS)");
     C130Hercules.procedureAfterTakeOff.set("TAXI/LANDING LIGHTS", "OFF AND RETRACT");
     C130Hercules.procedureAfterTakeOff.set("AUX HYDRAULIC PUMP", "OFF");
     C130Hercules.procedureAfterTakeOff.set("LEADING EDGE ANTI-ICE", "CHECKED");

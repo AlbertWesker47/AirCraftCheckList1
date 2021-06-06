@@ -7,10 +7,8 @@ const pro4 = afterTakeOff();
 let buttonCount = 0;
 let maintitle;
 let counter = document.getElementsByTagName('table').length;
-console.log(counter)
-
 let procedures = [pro1, pro2, pro3, pro4];
-let procedure_titles = ["BEFORE START","ENGINES MANAGEMENT","AFTER START","AFTER TAKEOFF / CLIMB"]
+let procedure_titles = ["BEFORE START","ENGINES MANAGEMENT","AFTER START","AFTER TAKE-OFF / CLIMB"]
 
 if (!String.prototype.contains) {
     String.prototype.contains = function(s) {
@@ -35,7 +33,6 @@ procedures.forEach(function (item){
     }
     let conteneur = document.createElement("table");
     conteneur.setAttribute("class", "table procedure table-striped table-bordered table-sm");
-    console.log(counter)
     let conteneurTitre = document.createElement("thead");
     let titre = document.createElement("th");
     titre.setAttribute("class", "th-sm")
@@ -70,18 +67,17 @@ procedures.forEach(function (item){
                 pilot1button.setAttribute("class", "button");
                 pilot1button.setAttribute("type", "button");
                 pilot1button.setAttribute("value", displayText);
-                pilot1button.setAttribute("id", "button" + buttonCount)
-                buttonCount++;
+                pilot1button.setAttribute("id", buttonCount)
                 pilot1button.onclick = function () {
                     validate(pilot1button.getAttribute("id"))
                 }
+                buttonCount++;
 
                 let pilot2button = document.createElement("input");
                 pilot2button.setAttribute("class", "button");
                 pilot2button.setAttribute("type", "button");
                 pilot2button.setAttribute("value", displayText);
-                pilot2button.setAttribute("id", "button" + buttonCount)
-                buttonCount++;
+                pilot2button.setAttribute("id", buttonCount)
                 pilot2button.onclick = function () {
                     validate(pilot2button.getAttribute("id"))
                 }
@@ -89,6 +85,8 @@ procedures.forEach(function (item){
                 buttonRow.appendChild(pilot2button);
                 procedureLine.appendChild(procedureConstruct);
                 procedureLine.appendChild(buttonRow);
+                buttonCount++;
+
             } else if (value.toString().contains("__")) {
 
             } else if (value.toString().contains(",")) {
@@ -97,10 +95,10 @@ procedures.forEach(function (item){
                 let procedureButton = document.createElement("input");
                 procedureButton.setAttribute("class", "button");
                 procedureButton.setAttribute("type", "button");
-                procedureButton.setAttribute("id", "button" + buttonCount)
+                procedureButton.setAttribute("id", buttonCount)
                 procedureButton.setAttribute("value", value);
                 procedureButton.onclick = function () {
-                    validate(procedureButton.getAttribute("id"))
+                    validate(procedureButton.getAttribute("id"));
                 }
                 buttonRow.appendChild(procedureButton);
                 procedureLine.appendChild(procedureConstruct);

@@ -12,26 +12,40 @@ if(document.getElementById("renegade") != null)
 }
 export function validate(id)
  {
-  let target_element = document.getElementById(id);
-
-  if (target_element.value === "SET")
+  let status = true;
+  let check_previous_step_status = function (id)
   {
-   console.log(target_element.value)
-   var entered_value = prompt("Please enter the value :")
-   while(entered_value == null || entered_value == "")
+   let previous_id = parseInt(id)-1;
+   let previous_element = document.getElementById(previous_id);
+   if(previous_element.style.color !== "limegreen")
    {
-    entered_value = prompt("The value must be entered.")
+    status = false;
+    alert("The previous step must be checked and clicked.")
    }
-   target_element.value = entered_value;
-   target_element.style.color = "limegreen";
-   target_element.disabled = true;
-  }
-  else
-  {
-   target_element.style.color = "limegreen";
-   target_element.disabled = true;
   }
 
+   if (parseInt(id) > 0)
+   {
+    check_previous_step_status(id);
+   }
+
+  let target_element = document.getElementById(id);
+   if (target_element.value === "SET" && status == true)
+   {
+    var entered_value = prompt("Please enter the value :")
+    while(entered_value == null || entered_value == "")
+    {
+     entered_value = prompt("The value must be entered.")
+    }
+    target_element.value = entered_value;
+    target_element.style.color = "limegreen";
+    target_element.disabled = true;
+   }
+   else if (status === true)
+       {
+        target_element.style.color = "limegreen";
+        target_element.disabled = true;
+       }
  }
 
 

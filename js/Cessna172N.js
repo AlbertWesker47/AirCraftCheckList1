@@ -9,6 +9,35 @@ export const Cessna172N = new Avion("Cessna","172N",
 if(document.getElementById("renegade") != null) {
     Cessna172N.createCard();
 }
+
+export function validate(id)
+{
+    let status = true;
+    let check_previous_step_status = function (id)
+    {
+        let previous_id = parseInt(id)-1;
+        let previous_element = document.getElementById(previous_id);
+        if(previous_element.style.color !== "limegreen")
+        {
+            status = false;
+            alert("The previous step must be checked and clicked.")
+        }
+    }
+
+    if (parseInt(id) > 0)
+    {
+        check_previous_step_status(id);
+    }
+
+    let target_element = document.getElementById(id);
+
+    if (status === true)
+    {
+        target_element.style.color = "limegreen";
+        target_element.disabled = true;
+    }
+}
+
 //Procédures pour le Cessna 172N
 export function beforeStartingEngineProcedure () {
 Cessna172N.procedureBeforeStartingEngine = new Map ();
